@@ -1,0 +1,95 @@
+body {
+  background-color: #1a1a1a; /* Dark background similar to the image */
+  color: #e0e0e0; /* Light text color */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Hide scrollbars if content is too large */
+}
+
+.periodic-table-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #2a2a2a; /* Slightly lighter background for the table area */
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.periodic-table {
+  display: grid;
+  grid-template-columns: repeat(18, 50px); /* 18 columns for the periodic table */
+  grid-gap: 5px;
+  padding: 10px;
+  background-color: #3a3a3a; /* Background for the grid itself */
+  border-radius: 5px;
+}
+
+.element {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.element:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Spacers for the periodic table layout */
+.spacer-1 {
+  grid-column: span 1;
+}
+
+.spacer-10 {
+  grid-column: span 10;
+}
+
+.spacer-16 {
+  grid-column: span 16;
+}
+
+.spacer-lanth-act {
+  grid-column: span 3; /* To align lanthanides and actinides correctly */
+}
+
+/* Color classes based on the image */
+.color-pink { background-color: #FF69B4; } /* Hydrogen */
+.color-red { background-color: #FF4500; } /* Noble gases, Halogens */
+.color-orange { background-color: #FFA500; } /* Nonmetals, Metalloids */
+.color-green { background-color: #3CB371; } /* Post-transition metals */
+.color-blue { background-color: #6A5ACD; } /* Transition metals */
+.color-purple { background-color: #8A2BE2; } /* Alkali metals, Alkaline earth metals, Lanthanides/Actinides placeholder */
+.color-pink-actinide { background-color: #DA70D6; } /* Deeper pink for Lanthanides/Actinides */
+
+
+.sidebar {
+  width: 250px;
+  padding: 15px;
+  background-color: #3a3a3a;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.info-box {
+  background-color: #4a4a4a;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.info-box p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
